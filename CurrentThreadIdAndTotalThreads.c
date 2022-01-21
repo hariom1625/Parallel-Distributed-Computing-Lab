@@ -1,3 +1,5 @@
+// Write a C/C++/JAVA program to display the Thread Id of current running thread and total number of threads that are present.
+
 #include <stdio.h>
 #include <omp.h>
 
@@ -15,7 +17,6 @@ int main (int argc, char** argv) {
 		#pragma omp for
 		for (int i = 1; i <= n; i++) {
 			intermediateSum += i;
-
 		}
 
 		printf("Intermediate Sum = %d ThreadId = %d\n", intermediateSum, omp_get_thread_num());
@@ -24,7 +25,6 @@ int main (int argc, char** argv) {
 		{
 			sum += intermediateSum;
 		}
-
 
 	}
 
